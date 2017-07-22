@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie App Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#!/">Movie App</a>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#!/popular">Popular</a>
+                    </li>
+                    <li>
+                        <a href="#!/upcoming">Up Coming</a>
+                    </li>
+                    <li>
+                        <a href="#!/nowPlaying">Now Playing</a>
+                    </li>
+                    <li>
+                        <a href="#!/topRated">Top Rated</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content Container -->
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    {{4 + 5}}
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container row">
+            <div class="col-lg-12">
+                <p>Movie App Project © Catalina Buades, SkylabCodeAcademy</p>
+            </div>
+        </div>
+    </footer>
+    <!-- angular script -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+
+    <!-- MAIN MODULE -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- SERVICES -->
+    <script type="text/javascript" src="js/services/DataService.js"></script>
+
+    <!-- ROUTE POPULAR -->
+    <script type="text/javascript" src="js/routes/popular/controller.js"></script>
+    <script type="text/javascript" src="js/routes/popular/index.js"></script>
+
+    <!-- ROUTE UPCOMING -->
+    <script type="text/javascript" src="js/routes/upcoming/controller.js"></script>
+    <script type="text/javascript" src="js/routes/upcoming/index.js"></script>
+
+    <!-- ROUTE NOWPLAYING -->
+    <script type="text/javascript" src="js/routes/nowPlaying/controller.js"></script>
+    <script type="text/javascript" src="js/routes/nowPlaying/index.js"></script>
+    
+    <!-- ROUTE TORATED -->
+    <script type="text/javascript" src="js/routes/topRated/controller.js"></script>
+    <script type="text/javascript" src="js/routes/topRated/index.js"></script>
+</body>
+
+</html>
